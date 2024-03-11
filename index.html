@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Okechukwu Ibeawuchi">
+    <meta name="description" content="Vault Cash Register">
+    <meta name="keywords" content="Vault Cash Register, Cash Register, Vault Register">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>UBA || Vault Cash Register</title>
+</head>
+<body>
+    <header id="header">
+        <h1 id="novee"><a href="index.html"><img src="logo2.png" alt="logo"></a>
+        <em style="display: block;">United Bank for Africa</em>
+        </h1>
+        <div id="dvlt">
+            <p class="date" id="date"></p>
+            <h2 id="vault">VAULT CASH REGISTER</h3>
+        </div>
+        <div id="currency">
+            <p id="ngnbtn" class="switch" onclick="viewNgn()">NGN</p>
+            <p id="usdbtn" class="switch" onclick="viewUsd()">USD</p>
+            <p id="gbpbtn" class="switch" onclick="viewGbp()">GBP</p>
+            <p id="eurbtn" class="switch" onclick="viewEur()">EUR</p>
+        </div>
+    </header>
+    <!--------------------------------------- NGN  ------------------------------------------>
+    <div id="ngn" class="alltables">
+        <table class="table" id="ngntable">
+            <tr class="tr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#8358; 1,000</p></td>
+                <td><p>&#8358; 500</p></td>
+                <td><p>&#8358; 200</p></td>
+                <td><p>&#8358; 100</p></td>
+                <td><p>&#8358; 50</p></td>
+                <td><p>&#8358; 20</p></td>
+                <td><p>&#8358; 10</p></td>
+                <td><p>&#8358; 5</p></td>
+                <td><p>&#8358; 2</p></td>
+                <td><p>&#8358; 1</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+            <!---------------------------------- NGN BALANCE BROUGHT FARWARD TABLE ------------------------------>
+            <tr class="tr cal bbf">
+                <td>BBF</td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+        <!--------------------------------------- NGN OUT TABLE ------------------------------------------>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT OUT</p>
+                <button id="addbtn" onclick="addRow()">Insert New Row</button>
+                <button id="removebtn" style="visibility: hidden;" onclick="removeRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+            <tr class="tr cal" id="add" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><input class="input" type="text" value="0"></td>
+                <td><p class="bfft">0</p></td>
+            </tr>
+        </table>
+        <table class="table total">
+            <tr class="tr cal tot">
+                <td scope="row"><p>OUT SUM</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout totalOutSum">0</p></td>
+            </tr>
+        </table>
+<!--------------------------------------- NGN IN DENOMINATION ------------------------------------------>
+        <table class="intable" id="ngnintable">
+            <tr class="intr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#8358; 1,000</p></td>
+                <td><p>&#8358; 500</p></td>
+                <td><p>&#8358; 200</p></td>
+                <td><p>&#8358; 100</p></td>
+                <td><p>&#8358; 50</p></td>
+                <td><p>&#8358; 20</p></td>
+                <td><p>&#8358; 10</p></td>
+                <td><p>&#8358; 5</p></td>
+                <td><p>&#8358; 2</p></td>
+                <td><p>&#8358; 1</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT IN</p>
+                <button id="inaddbtn" onclick="addInRow()">Insert New Row</button>
+                <button id="inremovebtn" style="visibility: hidden;" onclick="removeInRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+<!--------------------------------------- NGN IN TABLE ------------------------------------------>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+            <tr class="intr incal" id="addin" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><input class="inputin" type="text" value="0"></td>
+                <td><p class="inbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="intable intotal">
+            <tr class="intr incal tin">
+                <td scope="row"><p>IN SUM</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin totalinSum">0</p></td>
+            </tr>
+        </table>
+        <table class="bbdtable">
+            <tr class="bbdtr">
+                <td scope="row"><p>BBD</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="bbd">0</p></td>
+                <td><p class="totalbbd">0</p></td>
+            </tr>
+        </table>
+    </div>
+
+    <!--------------------------------------- USD  ------------------------------------------>
+    <div id="usd" class="alltables" style="display: none;">
+        <table class="table" id="usdtable">
+            <tr class="usdtr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#36; 100</p></td>
+                <td><p>&#36; 50</p></td>
+                <td><p>&#36; 20</p></td>
+                <td><p>&#36; 10</p></td>
+                <td><p>&#36; 5</p></td>
+                <td><p>&#36; 2</p></td>
+                <td><p>&#36; 1</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+            <!---------------------------------- USD BALANCE BROUGHT FARWARD TABLE ------------------------------>
+            <tr class="usdtr usdcal usdbbf">
+                <td>BBF</td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+        <!--------------------------------------- USD OUT TABLE ------------------------------------------>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT OUT</p>
+                <button id="usdaddbtn" onclick="usdAddRow()">Insert New Row</button>
+                <button id="usdremovebtn" style="visibility: hidden;" onclick="usdRemoveRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+            <tr class="usdtr usdcal" id="usdadd" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><input class="usdinput" type="text" value="0"></td>
+                <td><p class="usdbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="table total">
+            <tr class="usdtr usdcal usdtot">
+                <td scope="row"><p>OUT SUM</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout usdtotalOutSum">0</p></td>
+            </tr>
+        </table>
+<!--------------------------------------- USD IN DENOMINATION ------------------------------------------>
+        <table class="intable" id="usdintable">
+            <tr class="usdintr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#36; 100</p></td>
+                <td><p>&#36; 50</p></td>
+                <td><p>&#36; 20</p></td>
+                <td><p>&#36; 10</p></td>
+                <td><p>&#36; 5</p></td>
+                <td><p>&#36; 2</p></td>
+                <td><p>&#36; 1</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT IN</p>
+                <button id="usdinaddbtn" onclick="usdAddInRow()">Insert New Row</button>
+                <button id="usdinremovebtn" style="visibility: hidden;" onclick="usdRemoveInRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+<!--------------------------------------- USD IN TABLE ------------------------------------------>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+            <tr class="usdintr usdincal" id="usdaddin" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><input class="usdinputin" type="text" value="0"></td>
+                <td><p class="usdinbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="intable intotal">
+            <tr class="usdintr usdincal usdtin">
+                <td scope="row"><p>IN SUM</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin usdtotalinSum">0</p></td>
+            </tr>
+        </table>
+        <table class="bbdtable">
+            <tr class="usdbbdtr">
+                <td scope="row"><p>BBD</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdbbd">0</p></td>
+                <td><p class="usdtotalbbd">0</p></td>
+            </tr>
+        </table>
+    </div>
+
+<!----------------------------------------- GBP ----------------------------------------------->
+
+    <div id="gbp" class="alltables" style="display: none;">
+        <table class="table" id="gbptable">
+            <tr class="gbptr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#163; 50</p></td>
+                <td><p>&#163; 20</p></td>
+                <td><p>&#163; 10</p></td>
+                <td><p>&#163; 5</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+<!---------------------------------- GBP BALANCE BROUGHT FARWARD TABLE ------------------------------>
+            <tr class="gbptr gbpcal gbpbbf">
+                <td>BBF</td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+        <!--------------------------------------- GBP OUT TABLE ------------------------------------------>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT OUT</p>
+                <button id="gbpaddbtn" onclick="gbpAddRow()">Insert New Row</button>
+                <button id="gbpremovebtn" style="visibility: hidden;" onclick="gbpRemoveRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+            <tr class="gbptr gbpcal" id="gbpadd" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><input class="gbpinput" type="text" value="0"></td>
+                <td><p class="gbpbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="table total">
+            <tr class="gbptr gbpcal gbptot">
+                <td scope="row"><p>OUT SUM</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout gbptotalOutSum">0</p></td>
+            </tr>
+        </table>
+<!--------------------------------------- GBP IN DENOMINATION ------------------------------------------>
+        <table class="intable" id="gbpintable">
+            <tr class="gbpintr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#163; 50</p></td>
+                <td><p>&#163; 20</p></td>
+                <td><p>&#163; 10</p></td>
+                <td><p>&#163; 5</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT IN</p>
+                <button id="gbpinaddbtn" onclick="gbpAddInRow()">Insert New Row</button>
+                <button id="gbpinremovebtn" style="visibility: hidden;" onclick="gbpRemoveInRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+<!--------------------------------------- GBP IN TABLE ------------------------------------------>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+            <tr class="gbpintr gbpincal" id="gbpaddin" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><input class="gbpinputin" type="text" value="0"></td>
+                <td><p class="gbpinbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="intable intotal">
+            <tr class="gbpintr gbpincal gbptin">
+                <td scope="row"><p>IN SUM</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin gbptotalinSum">0</p></td>
+            </tr>
+        </table>
+        <table class="bbdtable">
+            <tr class="gbpbbdtr">
+                <td scope="row"><p>BBD</p></td>
+                <td><p class="gbpbbd">0</p></td>
+                <td><p class="gbpbbd">0</p></td>
+                <td><p class="gbpbbd">0</p></td>
+                <td><p class="gbpbbd">0</p></td>
+                <td><p class="gbptotalbbd">0</p></td>
+            </tr>
+        </table>
+        
+    </div>
+    <!----------------------------------------- EUR ----------------------------------------------->
+
+    <div id="eur" class="alltables" style="display: none;">
+        <table class="table" id="eurtable">
+            <tr class="eurtr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#8364; 500</p></td>
+                <td><p>&#8364; 200</p></td>
+                <td><p>&#8364; 100</p></td>
+                <td><p>&#8364; 50</p></td>
+                <td><p>&#8364; 20</p></td>
+                <td><p>&#8364; 10</p></td>
+                <td><p>&#8364; 5</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+<!---------------------------------- EUR BALANCE BROUGHT FARWARD TABLE ------------------------------>
+            <tr class="eurtr eurcal eurbbf">
+                <td>BBF</td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+        <!--------------------------------------- EUR OUT TABLE ------------------------------------------>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT OUT</p>
+                <button id="euraddbtn" onclick="eurAddRow()">Insert New Row</button>
+                <button id="eurremovebtn" style="visibility: hidden;" onclick="eurRemoveRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+            <tr class="eurtr eurcal" id="euradd" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><input class="eurinput" type="text" value="0"></td>
+                <td><p class="eurbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="table total">
+            <tr class="eurtr eurcal eurtot">
+                <td scope="row"><p>OUT SUM</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout valout">0</p></td>
+                <td><p class="totout eurtotalOutSum">0</p></td>
+            </tr>
+        </table>
+<!--------------------------------------- EUR IN DENOMINATION ------------------------------------------>
+        <table class="intable" id="eurintable">
+            <tr class="eurintr">
+                <td><p class="head">DETAILS</p></td>
+                <td><p>&#8364; 500</p></td>
+                <td><p>&#8364; 200</p></td>
+                <td><p>&#8364; 100</p></td>
+                <td><p>&#8364; 50</p></td>
+                <td><p>&#8364; 20</p></td>
+                <td><p>&#8364; 10</p></td>
+                <td><p>&#8364; 5</p></td>
+                <td><p class="head">TOTAL</p></td>
+            </tr>
+            <tr id="middle">
+                <td colspan="19" style="border: none; text-align: left;">
+                <p style="display: inline; margin: 5px 50px;">VAULT IN</p>
+                <button id="eurinaddbtn" onclick="eurAddInRow()">Insert New Row</button>
+                <button id="eurinremovebtn" style="visibility: hidden;" onclick="eurRemoveInRow()">Remove Last Row</button>  
+                </td>
+            </tr>
+<!--------------------------------------- EUR IN TABLE ------------------------------------------>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+            <tr class="eurintr eurincal" id="euraddin" style="display: none;">
+                <td scope="row"><input></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><input class="eurinputin" type="text" value="0"></td>
+                <td><p class="eurinbfft">0</p></td>
+            </tr>
+        </table>
+        <table class="intable intotal">
+            <tr class="eurintr eurincal eurtin">
+                <td scope="row"><p>IN SUM</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin val">0</p></td>
+                <td><p class="totin eurtotalinSum">0</p></td>
+            </tr>
+        </table>
+        <table class="bbdtable">
+            <tr class="eurbbdtr">
+                <td scope="row"><p>BBD</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurbbd">0</p></td>
+                <td><p class="eurtotalbbd">0</p></td>
+            </tr>
+        </table>
+    </div>
+    <footer id="footer">
+        <p id="footnovee">More from Okechukwu:</p>
+        <span id="pixel"><a href="https://okechukwu01.github.io/Pixel-Art-Maker/" target="_blank">Pixel Art Maker</a></span>
+        <span id="bmi"><a href="https://okechukwu01.github.io/BMI-Calculator" target="_blank">BMI Calculator</a></span>
+        <span id="si"><a href="https://okechukwu01.github.io/S.I-Calculator" target="_blank">Simple Interest Calculator</a></span>
+        
+        <hr>
+        <p id="copy">Created by Okechukwu. &copy; 2024.</p>
+        <P id="created">Proposed for UBA.</P>
+    </footer>
+    <script src="index.js"></script>
+    <script src="usdindex.js"></script>
+    <script src="gbpindex.js"></script>
+    <script src="eurindex.js"></script>
+</body>
+</html>
